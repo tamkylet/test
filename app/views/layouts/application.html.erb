@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <%= favicon_link_tag 'idea.ico' %>
+	  <title><%= full_title(yield(:title)) %></title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <div id="background-img">
+  	  <%= render 'layouts/header' %>
+      <%= render 'layouts/messages' %>
+      <div id="inner-body">
+        <%= yield %>
+      </div>
+      <%= render 'layouts/footer' %>
+<!--       <% if Rails.env.development? %><div id="debug-border"><%= debug(params) %></div><% end %> -->
+    </div>
+  </body>
+</html>

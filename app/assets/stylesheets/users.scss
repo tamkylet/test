@@ -1,0 +1,58 @@
+$form-fonts: Arial, Calibri, sans-serif;
+
+
+#signup-table-rails {
+	margin: auto
+}
+
+.form-title {
+	text-align: left;
+	font-family: Helvetica, Arial, sans-serif;
+	font-weight: 400;
+	color: #0080ff;
+	margin: 0
+}
+
+#signup-table {
+	margin: auto
+}
+
+#signup-table tbody {
+	margin: auto;
+	tr > th > p {
+		font-family: $form-fonts;
+		font-weight: normal;
+		font-size: 1.15em;
+		margin-bottom: 0;
+		text-align: left;
+		color: #68838B
+	}
+	tr > td > input {
+		height: 2em;
+    	border-radius: 0.5em;
+    	border-style: solid;
+    	outline: none;
+    	border-color: #68838B;
+    	padding-left: 0.5em
+	}
+	tr > td > p {
+		display: inline;
+		font-family: $form-fonts;
+		font-size: 85%;
+		color: #0080ff;
+		display: none
+	}
+}
+
+#accept-button {
+   	border-radius: 0.5em;
+	border-style: solid;
+	margin-top: 1.75em;
+	height: 3em !important;
+	outline: none;
+	font-size: 1em;
+	color: #68838B;
+	background-color: #D3D3D3;
+	margin-bottom: 1.75em;
+	cursor: pointer
+}

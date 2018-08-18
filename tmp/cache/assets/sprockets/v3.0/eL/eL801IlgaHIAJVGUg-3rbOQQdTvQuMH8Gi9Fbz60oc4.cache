@@ -1,0 +1,37 @@
+{:uriI"file://app/assets/stylesheets/media_queries_reference.txt?type=text/plain&id=725d6d57a869b19e80d1c656ace181ea52ab9656340cde04eadbb3df94918d8c:ET:load_pathI"app/assets/stylesheets;T:filenameI"7app/assets/stylesheets/media_queries_reference.txt;T:	nameI"media_queries_reference;T:logical_pathI" media_queries_reference.txt;T:content_typeI"text/plain;T:sourceI"V/* Smartphones (portrait and landscape) ---------- */
+@media screen and (min-width: 320px) and (max-width: 480px){
+    /* styles */
+}
+/* Smartphones (portrait) ---------- */
+@media screen and (max-width: 320px){
+    /* styles */
+}
+/* Smartphones (landscape) ---------- */
+@media screen and (min-width: 321px){
+    /* styles */
+}
+/* Tablets, iPads (portrait and landscape) ---------- */
+@media screen and (min-width: 768px) and (max-width: 1024px){
+    /* styles */
+}
+/* Tablets, iPads (portrait) ---------- */
+@media screen and (min-width: 768px){
+    /* styles */
+}
+/* Tablets, iPads (landscape) ---------- */
+@media screen and (min-width: 1024px){
+    /* styles */
+}
+
+/* Desktops and laptops ---------- */
+@media screen and (min-width: 1224px){
+    /* styles */
+}
+/* Large screens ---------- */
+@media screen and (min-width: 1824px){
+    /* styles */
+};T:metadata{	:dependencieso:Set:
+@hash}
+I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"4processors:type=text/plain&file_type=text/plain;TTI"Efile-digest://app/assets/stylesheets/media_queries_reference.txt;TTF:charsetI"
+utf-8;F:digest"%KS—ïiÞ$ÐÇiž”¦G*ø¢•ÕPT5ã¤‰‹`Ë}:lengthiV:dependencies_digest"%;rêµ‚8êîýb'(Æ?R-ÛS>ë\pË2¨ª¯’ê:idI"E725d6d57a869b19e80d1c656ace181ea52ab9656340cde04eadbb3df94918d8c;F:
+mtimel+ÅJq[

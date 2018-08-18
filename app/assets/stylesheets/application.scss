@@ -1,0 +1,407 @@
+/* SCSS files */
+//= require users
+//= require sessions
+//= require image_differences
+//= require media_queries
+
+
+$light-yellow: #ffffCC;
+$default-fonts: Helvetica, Arial, sans-serif;
+
+body, html {
+	width: 100%;
+	height: 100%;
+	padding: 0;
+	margin: 0;
+	position: absolute
+}
+
+#background-img {
+	position: relative;
+	background-image: linear-gradient(to bottom, transparent, white), url("normal_background.svg");
+	background-position: center;
+	background-repeat: no-repeat;
+	min-height: 100%;
+	max-height: 100%
+}
+
+#nav {
+	background: rgba(255,255,255,0.6);
+	border-bottom: 0.25em solid $light-yellow;
+	position: fixed;
+	width: 100%;
+	z-index: 1
+}
+
+#sandwich {
+	display: inline-block;
+    cursor: pointer;
+    position: absolute;
+    top: 1em
+}
+
+#bar1, #bar2, #bar3 {
+    width: 1.5em;
+    height: 0.2em;
+    background-color: #C0C0C0;
+    margin: 0.3em 0;
+    transition: 0.4s;
+}
+
+.change #bar1 {
+    -webkit-transform: rotate(-45deg) translate(-0.2em, 0.5em);
+    transform: rotate(-45deg) translate(-0.2em, 0.5em);
+    background-color: #0080ff
+}
+
+.change #bar2 {
+	opacity: 0;
+}
+
+.change #bar3 {
+    -webkit-transform: rotate(45deg) translate(-0.14em, -0.55em);
+    transform: rotate(45deg) translate(-0.14em, -0.55em);
+    background-color: #0080ff
+}
+
+#name-container {
+	display: inline-block;
+	cursor: pointer
+}
+
+#arrow-icon.flip {
+	-webkit-transform: rotate(180deg);
+    transform: rotate(180deg)
+}
+
+#side-navigate {
+	position: fixed;
+    width: 18em;
+    left: -18.25em;
+    transition: 1s;
+    background: white;
+    overflow-x: hidden;
+    top: 4.55em;
+    z-index: 1;
+    font-family: Arial, Calibri, sans-serif;
+    border-right: 0.25em solid $light-yellow
+}
+
+#side-navigate a, #dropdown-button {
+    text-decoration: none;
+    font-size: 1.25em;
+    color: #8aacb8;
+    display: block;
+    border: none;
+    background: none;
+    text-align: left;
+    background: white;
+    cursor: pointer;
+    outline: none
+}
+
+#side-navigate .line-on-it {
+	border-bottom: 0.05em solid rgba(0,255,255,0.3)
+}
+
+#side-navigate a:hover,
+#dropdown-content:hover
+ {
+    color: #0080ff;
+    background-color: rgba(255,255,204,0.6);
+    outline: none
+}
+
+#top-line {
+	border-top: 0.05em solid rgba(0,255,255,0.3) !important
+}
+
+#arrow-icon {
+    float: right;
+    margin-right: 1.2em
+}
+
+#dropdown-content {
+	display: none
+}
+
+#dropdown-content.active {
+	display: block;
+    background-color: #e3e7ea
+}
+
+.idea-dropdown {
+	height: 0.75em;
+	width: 0.75em
+}
+
+.icon-dropdown {
+	height: 0.85em;
+	width: 0.85em
+}
+
+.loading-container {
+	position: relative;
+	opacity: 1;
+	animation-name: fadeInOpacity;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in;
+	animation-duration: 1s
+}
+
+@keyframes fadeInOpacity {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+.loading-idea {
+	margin: -3.7em auto;
+	height: 1.5em;
+	width: 1.5em;
+	animation: pulse 0.5s infinite;
+	display: table;
+	animation-direction: alternate;
+	-webkit-animation-name: loading-idea;
+	animation-name: loading-idea
+}
+
+@-webkit-keyframes loading-idea {
+  0% {
+    -webkit-transform: scale(1)
+  }
+  50% {
+    -webkit-transform: scale(1.1)
+  }
+  100% {
+    -webkit-transform: scale(1)
+  }
+}
+
+@keyframes loading-idea {
+  0% {
+    transform: scale(1)
+  }
+  50% {
+    transform: scale(1.1)
+  }
+  100% {
+    transform: scale(1)
+  }
+}
+
+#side-navigate.slide {
+    left: 0
+}
+
+#inner-body.slide {
+	background-color: rgba(88,88,88,0.3);
+	opacity: 0.3
+}
+
+body.slide {
+	overflow: hidden
+}
+
+#github {
+	height: 2em;
+	width: 5em;
+	opacity: 0.3;
+	padding-left: 2.2em;
+	cursor: pointer
+}
+
+#login-signup, #login-signup-on {
+	float: right;
+	margin-top: 0.85em
+}
+
+#login-signup > p {
+	display: inline-block;
+	font-family: $default-fonts;
+	font-size: 1em;
+	margin: 0
+}
+
+.no-link-line {
+	text-decoration: none
+}
+
+#login-signup > p:nth-child(1) {
+    border: 0.2em;
+    border-style: solid;
+    border-color: #32CD32;
+    border-radius: 0.5em;
+    background-color: #32CD32;
+    cursor: pointer;
+
+    color: white;
+    padding: 0.5em 0.7em 0.5em 0.7em;
+
+    a:link {
+		color: white
+	}
+	a:visited {
+		color: white
+	}
+}
+
+#login-signup > p:nth-child(2) {
+	padding-left: 1.25em;
+	margin-right: 2em;
+	color: #68838B;
+
+    a:link {
+		color: #68838B
+	}
+	a:visited {
+		color: #68838B
+	}
+}
+
+#messages {
+	position: absolute;
+	top: 4.5em;
+	width: 100%;
+	height: 2em;
+	background: transparent;
+	opacity: 1;
+	transition:opacity 1000ms;
+	-webkit-animation: expand 2s
+}
+
+#messages.disappear {
+	opacity: 0
+}
+
+#message-positioning {
+	opacity: 0;
+	transition: opacity 1s;
+	position: relative;
+	top: -0.5em;
+	text-align: center;
+	font-family: Helvetica, Arial, sans-serif;
+	font-weight: bold
+}
+
+#message-positioning.fade {
+	opacity: 1
+}
+
+@-webkit-keyframes expand {
+	0%{height:0px}
+	100%{height:2em}
+}
+
+#footer {
+	background: #D3D3D3;
+	border-top: 0.25em solid $light-yellow;
+	height: 3em;
+	padding-bottom: 2em;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+
+    color: #68838B;
+    opacity: 0.6;
+    font-family: $default-fonts;
+    width: 100%;
+
+    #footer-links {
+    	float: left;
+
+    	p {
+    		display: inline
+    	}
+    }
+
+    #references {
+    	background: #D3D3D3;
+    	float: right;
+		padding: 1em 2em 1em 2em
+    }
+}
+
+.links-color {
+	a:link, a:visited, a:hover {
+		color: #0080ff
+	}
+}
+
+#idea-icon {
+	width: 2em;
+	height: auto
+}
+
+.idea-icon-form {
+	width: 2em;
+	height: 2em;
+	float: left;
+	padding-right: 0.75em
+}
+
+#title1 {
+	font-family: $default-fonts;
+	font-size: 2em;
+	color: #68838B;
+	display: inline-block;
+	margin: 0.5em 0 0.5em 0.4em
+}
+
+#title2 {
+	padding-left: 0.25em;
+	font-family: $default-fonts;
+	font-size: 2em;
+	color: #0080ff;
+	display: inline-block;
+	margin: 0.5em 0em 0.5em 0
+}
+
+#debug-border {
+	text-align: center;
+	font-weight: bold;
+	font-style: italic;
+	color: #545454;
+
+    border: 0.25em;
+    border-style: solid;
+    border-color: #0080ff;
+    border-radius: 1em;
+    background-color: $light-yellow;
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%
+}
+
+#inner-body {
+	min-height: 100vh;
+	padding-top: 8em
+}
+
+#applications {
+	display: block;
+	text-align: center;
+	margin: 0 auto;
+
+	ul {
+		padding: 0;
+		margin: 0
+	}
+}
+
+.boxes {
+	display: inline-block;
+	background-color: #7EC0EE;
+	opacity: 0.3;
+	border-radius: 0.5em;
+	cursor: pointer
+}

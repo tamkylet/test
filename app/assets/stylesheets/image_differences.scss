@@ -1,0 +1,77 @@
+$img-fonts: Helvetica, Arial, sans-serif;
+
+.app-title {
+	font-family: $img-fonts;
+	color: #0080ff;
+	margin-top: 0
+}
+
+#img-compare {
+	display: block;	
+	text-align: center;
+	margin: 0 auto
+}
+
+.img-lining {
+	border-style: solid;
+	border-width: 0.15em;
+	border-color: #00b0b0;
+	border-radius: 0.5em;
+	font-family: Arial, Calibri, sans-serif;
+	color: #68838B;
+	overflow: hidden;
+
+	img {
+		cursor: pointer;
+		transition-duration: 0.9s
+	}
+
+	h2 {
+		color: #0080ff
+	}
+}
+
+#img-button {
+	width: 20em;
+   	border-radius: 0.5em;
+	border-style: solid;
+	margin-top: 3em;
+	height: 3em !important;
+	outline: none;
+	font-size: 1em;
+	color: white;
+	background-color: rgb(50, 205, 50);
+	margin-bottom: 1.75em;
+	cursor: pointer
+}
+
+#img-1, #img-2 {
+	transition-duration: 0.8s
+}
+
+#img-diff-contain-1, #img-diff-contain-2 {
+	position: absolute;
+	bottom: 6em;
+	max-width: 100%;
+	height: auto;
+	width: auto;
+	z-index: 1;
+	display: none
+}
+
+.img-full {
+	max-width: 100%;
+	height: auto
+}
+
+#inner-body.slider {
+	background-color: rgba(88,88,88,0.3)
+}
+
+#exit-img-1, #exit-img-2 {
+	position: absolute; 
+	font-family: $img-fonts;
+	top: 0em;
+	color: white;
+	cursor: pointer
+}

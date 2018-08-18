@@ -1,0 +1,90 @@
+class ImageDifferences extends React.Component {
+	componentDidMount() {
+		var outNavey = document.querySelector('#inner-body');
+		var wholeBody = document.getElementsByTagName('body')[0];
+		var img1 = document.getElementById('img-1');
+		var img2 = document.getElementById('img-2');
+
+		img1.addEventListener('click', function() {
+			document.getElementById('img-diff-contain-1').style.display = "block";
+			img1.style.opacity = "0.3";
+			img2.style.opacity = "0.3";
+			outNavey.classList.toggle('slider');
+			wholeBody.classList.toggle('slider');
+		});
+
+		img2.addEventListener('click', function() {
+			document.getElementById('img-diff-contain-2').style.display = "block";
+			img1.style.opacity = "0.3";
+			img2.style.opacity = "0.3";
+			outNavey.classList.toggle('slider');
+			wholeBody.classList.toggle('slider');
+		});
+
+		outNavey.addEventListener("mousedown", function(e) {
+			if(this.classList.contains('slider') && !document.getElementById('img-diff-contain-1').contains(e.target)) {
+				outNavey.classList.toggle('slider');
+				wholeBody.classList.toggle('slider');
+				document.getElementById('img-diff-contain-1').style.display = "none";
+				document.getElementById('img-diff-contain-2').style.display = "none";
+				img1.style.opacity = "";
+				img2.style.opacity = "";
+			}
+		});
+
+		if (document.getElementById('img-button') != null)
+			document.getElementById('img-button').addEventListener('click', function() {
+				window.location = "/image_differences_generate";
+			});
+	}
+	index_checker() {
+		if(this.props.index == true) {
+			return (
+				<div>
+					<button id="img-button">Detect Differences</button>
+				</div>
+			)
+		}
+		else {
+			return (
+				<div>
+					<br/><br/>
+					<Loadinggif />
+				</div>
+			)
+		}
+	}
+	render() {
+		return (
+			<div>
+				<div className="app-title-space">
+					<div className="app-titles">
+						<%= image_tag("idea.svg", :alt => "idea icon", :class => "idea-icon-title") %>
+						<p className="app-title">Image Differences</p>
+					</div>
+				</div>
+				<div id="img-compare">
+					<div className="img-lining">
+						<h2>Before Epic</h2>
+						<%= image_tag("before_epic.png", :alt => "before epic screenshot", :id => "img-1") %>
+						<p>Sign up page before epic.</p>
+					</div>
+					<div className="img-lining">
+						<h2>After Epic</h2>
+						<%= image_tag("after_epic.png", :alt => "after epic screenshot", :id => "img-2") %>
+						<p>Sign up page after epic.</p>
+					</div>
+					{this.index_checker()}
+				</div>
+				<div id="img-diff-contain-1">
+					<%= image_tag("before_epic.png", :alt => "before epic screenshot", :class => "img-full") %>
+					<div id="exit-img-1">Ⓧ</div>
+				</div>
+				<div id="img-diff-contain-2">
+					<%= image_tag("after_epic.png", :alt => "after epic screenshot", :class => "img-full") %>
+					<div id="exit-img-2">Ⓧ</div> 				
+				</div>
+			</div>
+		)
+	}
+}
